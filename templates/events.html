@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}untitled.np - Events{% endblock title %}
+{% block eventsactive %}active{% endblock eventsactive %}
+{% block body %}
+<div class="event-background">
+
+</div>
+  <div class="events">
+    <div class="event-card-container">
+    {% if events%}
+    {% for items in events %}
+      <div class="event-card">
+        <div class="event-date event-card-item">
+            {{items.date}}
+        </div>
+
+        <div class="event-details event-card-item">
+            <h3 class='event-name'> {{items.name}} </h3> <br>
+            <br> <small>Live Performance from {{items.artists}} <br> <br>
+            At {{items.location}}, {{items.time}} onwards.
+            </small>
+        </div>
+
+        <div class="ticket-button-container event-card-item">
+          <form action="https://uat.esewa.com.np/epay/main" method="POST">
+            <input value={{items.ticketPrice}} name="tAmt" type="hidden">
+            <input value={{items.ticketPrice}} name="amt" type="hidden">
+            <input value="0" name="txAmt" type="hidden">
+            <input value="0" name="psc" type="hidden">
+            <input value="0" name="pdc" type="hidden">
+            <input value="EPAYTEST" name="scd" type="hidden">
+            <input value="ee2c3ca1-696b-4cc5-a6be-2c40d929d453" name="pid" type="hidden">
+            <input value="http://merchant.com.np/page/esewa_payment_success?q=su" type="hidden" name="su">
+            <input value="http://merchant.com.np/page/esewa_payment_failed?q=fu" type="hidden" name="fu">
+            
+            <button class="tickets-button" type="submit">Tickets</button>
+            </form>
+        </div>
+
+    </div>
+    <hr>
+    {% endfor %}
+    
+    {% else %}
+    <h2 style="text-align:center;"> NO EVENTS TO SHOW </h2>
+    {% endif %}
+    </div>
+  </div>
+{% endblock body%}

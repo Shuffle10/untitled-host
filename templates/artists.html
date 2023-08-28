@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}untitled.np - Artists{% endblock title %}
+{% block artistsactive %}active{% endblock artistsactive %}
+{% block body %}
+
+
+    {% comment %} <div class="section-heading artists-heading">
+        <h1>Artists</h1>
+    </div> {% endcomment %}
+    {% comment %} <div class="gallery">
+        <div class="gallery__column">
+            <a href="#" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="/static/img/khusbu1.jpg" alt="khusbu" class="gallery__image">
+                    <figcaption class="gallery__caption">khusbu</figcaption>
+                </figure>
+            </a>
+    
+            <a href="#" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="/static/img/ronim.jpg" alt="Portrait by Oladimeji Odunsi" class="gallery__image">
+                    <figcaption class="gallery__caption">Portrait by Oladimeji Odunsi</figcaption>
+                </figure>
+            </a>
+        </div>
+        
+        <div class="gallery__column">
+            <a href="#" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="/static/img/satish.jpg " alt="Portrait by Noah Buscher" class="gallery__image">
+                    <figcaption class="gallery__caption">sajjan raj vaidhya</figcaption>
+                </figure>
+            </a>
+            
+            <a href="#" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="/static/img/4.jpg" alt="Portrait by Ivana Cajina" class="gallery__image">
+                    <figcaption class="gallery__caption">5:55</figcaption>
+                </figure>
+            </a>
+    
+
+        </div>
+        
+        <div class="gallery__column">
+            <a href="#" target="_blank" class="gallery__link">
+                <figure class="gallery__thumb">
+                    <img src="/static/img/manav1.jpg" alt="Portrait by Mari Lezhava" class="gallery__image">
+                    <figcaption class="gallery__caption">manav subedi</figcaption>
+                </figure>
+            </a>
+            
+            
+        </div>
+    </div> {% endcomment %}
+
+<section class="artists-page" style="background-color: white;">
+     <div class="container1">
+        <h3> Artists</h3>
+    </div>
+        <div class="artist-container">
+            {% for items in artists %}
+            <div class="artist" style="background: url({{items.artist_image_wide.url}}); background-position:0% 30%; background-size: cover;">
+                <div class="artist-details">
+                <div class="artist-name">
+                    <h4>{{items.name_first}}</h4> 
+                    <h4>{{items.name_first}}</h4> 
+                    <h4>{{items.name_first}}</h4> 
+                    <h4>{{items.name_first}}</h4> 
+                    <h4>{{items.name_first}}</h4> 
+                    <h4>{{items.name_first}}</h4> 
+
+                </div>
+                <div class="artist-socials">
+                    
+            <a href="{{items.facebook}}" target='_blank'>
+                <ion-icon name="logo-facebook" id='fb'></ion-icon>
+            </a>
+            <a href="{{items.instagram}}" target='_blank'>
+                <ion-icon name="logo-instagram" id='ig'></ion-icon>
+            </a>
+            <a href="{{items.youtube}}" target='_blank'>
+                <ion-icon name="logo-youtube" id='yout'></ion-icon>
+            </a>
+                </div>
+            </div>
+            </div>  
+            {% endfor %}         
+        </div>
+    </section>
+
+
+{% endblock body %}

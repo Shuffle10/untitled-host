@@ -1,0 +1,1230 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    font-family:-apple-system, BlinkMacSystemFont, sans-serif;
+    /* background-color: black; */
+
+}
+
+body{
+    color: white;
+    background: black;
+    background: url('img/galaxy.gif');
+    cursor: url('img/cursor.png'),auto;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+hr{
+    border: 1px solid rgb(172, 172, 172);
+
+}
+.logo{
+    width:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    /* border: 2px solid blue; */
+}
+
+.logo a{
+    text-decoration: none;
+    color: white;
+    font-weight: lighter;
+}
+.logo span{
+    font-weight: bold;
+}
+
+.cover-photo{
+    margin-top: 30px ;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: sticky;
+    top:0;
+    cursor: pointer;
+    z-index: 100;
+    background: none;
+    transition: 0.4s;
+    
+}
+
+.nav-list{
+    width: 50%; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+}
+
+.nav-list li{
+    list-style: none;
+    padding: 26px 23px;
+    transition: 0.4s;
+}
+
+.nav-list li a{
+    color: #b1b1b1;
+    font-size: 18px;
+    text-transform: lowercase;
+    padding: 7px 0px;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-list li a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 1px;
+    background-color: #979797;
+    transition: 0.4s ease;
+    border-radius: 2px;
+}
+
+.nav-list li a:hover::after{ 
+    
+    /* text-decoration: underline;
+    text-decoration-color: rgb(255, 255, 255);
+    text-underline-offset: 10px; */
+    left: 0;
+    width: 100%;
+}
+
+.rightNav{ 
+    width: 2%;
+    text-align: center;
+    padding: 0 60px;
+    /* border: 2px solid green; */
+}
+
+.subscribe-button{
+    color: white;
+    background: black;
+    height: 50px;
+    border: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.button{
+    color: black;
+    background: white;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.4s;
+    cursor: pointer;
+    width: 150px;
+}
+
+.button:hover{
+    color: white;
+    background: black;
+}
+
+.btn-dark:hover{
+    color: black;
+    background: white;
+    border: 1px solid grey;
+
+}
+
+.btn-dark{
+    color: white;
+    border: 1px solid grey;
+    background: black;
+
+}
+
+.sticky{
+    background: white;
+    color: black;
+    position: fixed;
+    width: 100%;
+}
+
+.sticky a{
+    color: black;
+    text-decoration: none;
+}
+
+
+
+.sticky ul li{ 
+   padding: 20px;
+}
+
+.sticky .nav-list li a{
+    color: black;
+    
+}
+
+.sticky .nav-list li a:hover{
+    text-decoration: none;
+    color: rgb(70, 70, 70);
+    font-size: 17px;
+}
+
+.sticky .rightNav .subscribe-button{
+    color: black;
+    background: white;
+}
+
+
+
+.nav-list>.active>a{
+    color: rgb(255 255 255);
+    font-size: 18px;
+    
+}
+
+.slider-content span{
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+.home-video{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+
+
+}
+.cover-video-container{
+    height: 450px;
+    max-width: 100%;
+
+}
+
+.cover-video{
+    object-fit: cover;
+    object-position: center;
+    height: 450px;
+    width: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+
+
+
+}
+
+.video-text{
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    top: 300px;
+    text-transform: uppercase;
+}
+
+
+.firstSection{
+    height: 75vh;
+    margin-bottom: 300px;
+}
+
+.box-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 80%;
+}
+
+.firstHalf{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    font-size: 40px;
+    font-family:-apple-system, BlinkMacSystemFont, sans-serif;
+    text-transform: uppercase;
+    text-align: left;
+    margin-left: 100px;
+    margin-top: 170px;
+    line-height: 1.4em;
+}
+
+.about-us{
+    margin-top: 200px;
+}
+
+.text-big{
+    font-size: 41px;
+}
+
+.text-small{
+    font-size: 18px;
+    padding-top: 10px;
+    transition: 0.3s;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#more-releases{
+    width: 200px;
+    margin: auto;
+}
+
+
+.section{ 
+    max-width: 100%;
+    margin: auto;
+}
+
+.section-heading{
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 60px;
+    font-size: 26px;
+    text-underline-offset: 15px;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    letter-spacing: 4px;
+}
+#section-about{
+    height: 250px;
+    background: url(img/aboutus.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: grayscale(100%);
+    transition: 0.8s;
+}
+
+#section-about:hover{
+    filter: none;
+}
+
+.paras{
+    padding: 55px 65px;
+    margin: 20px auto;
+    font-size: 20px;
+    line-height: 1.45em;
+    width: 70%;
+    text-align: center;
+
+}
+
+.blog-content{
+    margin: 20px auto;
+    display: block;
+    font-size: 20px;
+    line-height: 1.45em;
+    width: 95%;
+    text-align: justify;
+}
+
+.section{
+    margin: 160px 0px;
+}
+
+.contact{
+    /* background-color: black; */
+    height: 660px;
+
+}
+.text-center{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.form{
+    max-width: 50%;
+    margin: 25px auto;
+}
+
+.form-input{
+    margin: 14px 0;
+    padding: 10px 13px;
+    width: 100%; 
+    font-size: 19px;
+    border: 2px solid grey;
+    border-radius: 6px;
+    
+}
+
+
+input{
+ padding: 0px 15px;
+}
+
+
+#section-rr{
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-size: 14px;
+}
+#section-rr a{
+    color: white;
+    text-decoration: none;
+}
+
+/* #section-rr::after{
+    content: "";
+    background: white;
+    display: inline-block;
+    height: 2px;
+    width: 140px;
+    margin-top: 20px;
+  
+} */
+
+#newsletter{
+
+    display:flex;
+    width: 42%;
+    margin: 50px 0px;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.form2 {
+    margin-top: 40px;
+}
+
+
+
+#email{
+
+    color: black;
+    background: white;
+    height: 50px;
+    width: 260px;
+    border: none;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    border: 2px solid black;
+    margin-right: 20px;
+}
+
+.text-footer{
+    text-align: center;
+    font-weight: bold;
+    padding: 30px 0;
+   display: flex;
+   justify-content: center;
+   color: rgb(173, 173, 173);
+   text-transform: uppercase;
+   font-size: 12px;
+   
+}
+
+
+.burger{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top:15px;
+}
+.line{
+    width: 33px;
+    background-color: white;
+    height: 4px;
+    margin: 5px 3px;
+}
+
+#testimonials {
+
+	overflow: hidden;
+    /* border: 2px solid red; */
+    height: auto;
+    width: 70%;
+    margin: 50px auto;
+}
+#testimonials figure {
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: 30s slider infinite;
+    
+}
+#testimonials figure img {
+	width: 20%;
+	float: left;
+
+}
+
+@keyframes slider {
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -100%;
+	}
+	45% {
+		left: -100%;
+	}
+	50% {
+		left: -200%;
+	}
+	70% {
+		left: -200%;
+	}
+	75% {
+		left: -300%;
+	}
+	95% {
+		left: -300%;
+	}
+	100% {
+		left: -400%;
+	}
+}
+
+.collaborations{
+    /* background-color: black; */
+    color: white;
+}
+
+
+
+
+  .listen-button{
+    display: flex;
+    width: 65%;
+    margin: 6px auto;
+    cursor: pointer;
+}
+
+.listen-button button{
+    background: white;
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    text-transform: uppercase;
+    height: 30px;
+    width: 60px;
+    font-size: 22px;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    margin: 3px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+#yt:hover {
+    background-color: red;
+    color: white;
+}
+#spotify:hover {
+    background-color: rgb(71, 192, 71);
+    color: white;
+}
+
+.quote-submit-button{
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: fit-content;
+  margin: 50px 100px;
+
+
+}
+
+.card {
+  /* background-color: #000000; */
+  height: 20rem;
+  border-radius: 5px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.7);
+  color: white;
+  transition: 0.3s;
+}
+
+.card>span{
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: gray;
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+.card__name {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.card__image {
+  height: 200px;
+  width: 200px;
+  margin-top: 20px;
+  filter: grayscale(0%);
+  transition: 0.5s;
+
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem 'Roboto Slab', sans-serif;
+  padding: 0.75em 2em;
+  letter-spacing: 0.05rem;
+  margin: 1em;
+  width: 13rem;
+}
+
+.newsletter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap ;
+    /* background-color: rgb(0, 0, 0); */
+    color: rgb(255, 255, 255);
+    margin-top: 50px
+}
+
+
+
+.newsletter-div{
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+
+
+
+}
+
+.social-section{
+    display: flex;
+    margin-right: 100px;
+    margin-left: 20px;
+    text-align: center;
+    flex-direction: column;
+
+
+}
+
+.newsletter-btn{
+    margin-left: 5px ;
+    
+}
+
+.socials{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+
+
+}
+
+.background{
+    color: black;
+    /* background: rgb(0, 0, 0); */
+    border-top: 1px solid grey;
+    left: 0;
+    bottom: 0;
+}
+
+.socials a{
+    margin: 1px 10px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+
+
+#fb:hover{
+    color: rgb(48, 97, 230);
+
+}
+#ig:hover{
+    color: rgb(194, 7, 100);
+
+
+}
+#yout:hover{
+    color:rgb(231, 17, 17);
+
+
+}
+
+#spotify2:hover{
+    color: rgb(51, 192, 51);
+}
+
+#tiktok:hover{
+    color: rgb(228, 36, 36);
+}
+
+.event-card{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 20px auto;
+    color: white;
+  }
+  
+  .event-card-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .event-card-container hr{
+    width: 90%;
+    border: 1px solid gray;
+    margin: 20px auto;
+  }
+  .event-name{
+      letter-spacing: 2.5px;
+  }
+  .event-details{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.1em;
+  }
+  
+  .tickets-button{
+    width: 250px;
+    height: 50px;
+    background: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    border: 2px solid gray;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s;
+  }
+  
+  .tickets-button:hover{
+    color: black;
+    background: white;
+  }
+
+
+  /* .artists-page{
+      background-color: white;
+      padding: 30px 0px;
+  } */
+  .container1{
+      background-color: white;
+      padding-top: 30px;
+  }
+  .container1 h3{
+      width: 50%;
+      margin: auto;
+      font-size: 50px;
+      text-align: center;
+      letter-spacing: 2px;
+
+    color: black;
+
+  
+  }
+  
+  .flip-box {
+    width: 150px;
+    height: 150px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    margin: 10px 20px;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+ 
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  }
+  
+
+.loader-container{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    position: fixed;
+}
+#pre-loader{
+    height: 600px;
+    width: 600px;
+}
+
+
+
+  .flip-box-inner img{
+      height: 150px;
+      width: 150px;
+      object-fit: cover;
+    object-position: center;
+    filter: saturate(0) brightness(2);
+    opacity: 0.7;
+    
+  }
+
+  .flip-box-back {
+    transform: rotateY(180deg);
+  }
+
+   .artist-container{
+       width: 85%;
+       margin: 40px auto;
+       background-color: white;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       padding-bottom: 20px;
+   }
+
+   
+
+   .artist{
+       width: 337.25px;
+       height: 150px;
+       margin: 10px 20px;
+       transition: 0.5s;
+       opacity: 1;
+       
+   }
+
+   .artist-details{
+       background-color: rgba(0, 0, 0, 0.4);
+       display: flex;
+       height: 150px;
+       opacity: 0;
+       justify-content: space-between;
+       align-items: flex-end;
+       color: rgb(255, 255, 255)!important;
+       transition: 0.5s;
+   }
+
+   .artist-details:hover{
+        opacity: 1;
+}
+
+.artist-details:hover h4{
+    transform: translateX(0px);
+}
+
+.artist-details:hover .artist-socials{
+    transform: translateX(0px);
+}
+
+
+    .artist-name{
+        font-size: 18px;
+        margin: 8px 8px;
+        /* font-weight: bold; */
+        
+    }
+
+   .artist-socials{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto 10px;
+        
+}
+
+   .artist-socials a{
+       text-decoration: none;
+       color: #e7e6e6;
+       font-size: 28px;
+       padding-bottom: 4px;
+   }
+
+   .artist-details h4{
+       transform: translateX(-50px);
+       transition: 0.3s;
+
+   }
+
+   .artist-socials{
+    transform: translateX(50px);
+    transition: 0.3s;
+
+}
+
+   .artist img{
+       width: 100%;
+       object-fit: cover;
+       object-position: center;
+       height: 150px;
+       
+   }
+
+
+.logo-container{
+    width: 90%;
+    margin: 60px auto;
+    /* border: 2px solid green; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+.videos-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px 90px;
+   
+}
+
+.video-box{
+    height: 200px;
+    width: 280px;
+    margin: 30px 0px;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.video-thumbnail{
+    display: flex;
+    /* background: url(img/thumbnail.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    height: 140px;
+    width: 248px;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 70px;
+    align-items: center;
+    justify-content: center ;
+    transition: 0.1s;
+    opacity: 0.8;
+
+}
+
+.video-thumbnail:hover{
+    font-size: 85px;
+}
+
+.video-box:hover{
+    background-color: rgb(20, 20, 20);
+}
+
+
+.video-title{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.modal-container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    align-items: center;
+    /* justify-content: center; */
+}
+
+#rocket{
+    display: none;
+}
+
+
+.video-modal{
+ margin-top: 40px;
+ width: 65%;
+ max-width: 100%;
+ margin: auto;
+}
+
+iframe{
+    border: none;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+
+
+.event-background{
+    height: 280px;
+    background: url('img/Sushant-KC_Prabish-Newa.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale(0%);
+    margin-bottom: 40px;
+    transition: 0.5s;
+    animation-name: fade;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+
+}
+
+
+#close-btn{
+    font-size: 40px;
+     position: fixed;
+     transition: 0.6s;
+}
+
+#close-btn:hover{
+    transform: rotate(90deg);
+}
+
+.alert {
+    padding: 20px;
+    background-color: #9be258; /* Red */
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+  /* The close button */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: black;
+  }
+
+.appear{   
+    cursor: pointer;
+    position: fixed;
+    bottom: 3%;
+    right: 30px;
+    transform: rotate(-53deg);
+    animation: appear 1s ease-in-out;
+    z-index: 100000;
+}
+
+
+.fly{
+    cursor: pointer;
+    position: fixed;
+    bottom: 3%;
+    right: 30px;
+    transform: rotate(-53deg);
+    animation: fly 0.7s ease-in-out;
+    z-index: 100000;
+}
+
+@keyframes fly{
+    0%{
+        bottom: 3%;
+     
+    }
+    10%{
+        bottom: 0;
+    }
+
+    30%{
+        bottom: 0;
+    }
+
+    80%{
+        opacity: 1;
+    }
+
+    100%{
+        bottom: 100%;
+        opacity: 0;
+    }
+}
+
+
+@keyframes appear {
+    0%{
+        bottom: 100%;
+     
+    }
+
+    100%{
+        bottom: 3%;
+    }
+    
+}
+
+
+@keyframes fade {
+    0%{
+        background: url('img/Sushant-KC_Prabish-Newa.jpg'); 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    25%{
+        background: url('img/animation2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    50% {
+        background: url('img/animation3.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    75%{
+        background: url('img/animation4.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    100%{
+        background: url('img/Sushant-KC_Prabish-Newa.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+
+
+
+  @media only screen and (max-width: 550px) {
+    .event-card{
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: none;
+    }
+  
+    .event-card-item{
+      margin: 10px 0px;
+  
+    }
+
+    .event-details{
+        text-align: left;
+
+      }
+
+      .form{
+          max-width: 80%;
+      }
+
+#section-rr {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.newsletter-div{
+    width: 80%;
+    margin: auto;
+}
+
+#section-rr::after {
+    content: "";
+    display: none;
+}
+
+.video-text{
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    top: 300px;
+    text-transform: uppercase;
+}
+
+  }
+
+
+
+
+
+  
+
+
+
+

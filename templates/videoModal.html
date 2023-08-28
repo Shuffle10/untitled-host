@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Videos{% endblock title %}
+
+
+{% block body %}
+
+<section class="videos-page">
+    <div class="videos-container" style="opacity: 0.5; filter: blur(1px);">
+        {% for items in allVideos %}
+        <div class="video-box">
+            <div class="video-thumbnail"
+                style="background:url('{{items.thumbnail_9x16.url}}'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+                <ion-icon name="play-outline" id="play"></ion-icon>
+            </div>
+            <div class="video-title">
+                {{items.title}}
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+    <div class="modal-container" id='video-modal'>
+        <div class="video-modal">
+            <iframe width="820" height="460" src="{{video.youtube}}" allow='autoplay'>
+            </iframe>
+            <a href="/videos/" style="text-decoration: none; color: white;"><ion-icon name="close-circle-outline"  id='close-btn' > </a>
+        </div>
+    </div>
+    
+  
+</section>
+{% endblock body %}

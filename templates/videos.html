@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Videos{% endblock title %}
+
+{% block videosactive %}active{% endblock videosactive %}
+{% block body %}
+<div class="cover-video-container">
+    <video src="/static/vid/covervid.mp4" class='cover-video' autoplay loop muted></video>
+    <!-- <div class="video-text">
+        <h1> from Kathmandu to the world</h1>
+    </div> -->
+</div>
+<section class="videos-page">
+    <div class="videos-container">
+        {% for items in videos %}
+        
+        <div class="video-box">
+            <div class="video-thumbnail"
+                style="background:url('{{items.thumbnail_9x16.url}}'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+                
+                <a href="/videos/{{items.slug}}" style="text-decoration: none; color: white;" >
+
+                    <!-- <ion-icon name="play-outline" id="play"></ion-icon> -->
+
+                </a>
+            </div>
+            <div class="video-title">
+                <p> {{items.title}} </p>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+    
+  
+</section>
+{% endblock body %}

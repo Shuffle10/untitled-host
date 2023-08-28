@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}untitled.np - Blogs{% endblock title %}
+{% block blogsactive %}active{% endblock blogsactive %}
+{% block body %}
+
+<section class="blog">
+  <h1> BLOGS</h1>
+  {% for items in posts %}
+  <div class="post-card">
+    <div class="meta">
+      <div class="photo" style="background-image: url({{items.image.url}})"></div>
+      <ul class="details">
+        <li class="author"><a href="#">
+            <ion-icon name="rocket-outline"></ion-icon>{{items.author}}
+          </a></li>
+        <li class="date">
+          <ion-icon name="rocket-outline"></ion-icon>{{items.dateTime}}
+        </li>
+        <li class="tags">
+          <ul>
+            <ion-icon name="rocket-outline"></ion-icon>
+            <li><a href="#">{{items.category}}</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1>{{items.title}}</h1>
+      {% comment %} <h2>Opening a door to the future</h2> {% endcomment %}
+      <p> {{items.content | slice:220 |safe}}...</p>
+      <p class="read-more">
+        <a href="/blogs/{{items.slug}}">Read More</a>
+      </p>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+{% endblock body %}

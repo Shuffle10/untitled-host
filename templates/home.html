@@ -1,0 +1,306 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}untitled.np{% endblock title %}
+{% block homeactive %}active{% endblock homeactive %}
+{% block body %}
+
+{% if messages %}
+  {% for message in messages %}
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      {{message}}
+    </div>
+  {% endfor %}
+{% endif %}
+
+<section class="firstSection">
+        <video class='home-video' autoplay loop muted>
+            <source src="/static/vid/space.mp4" type="video/mp4">
+
+        </video>
+        
+        <div class="slider-content firstHalf">
+          <p class="text-big">WE CREATE <br>IMPACTFUL VIDEOS, FAST.</p>
+          <span class="text-small"> From pre-production to distribution,<br> we got you covered.</span> <br>
+          <div class="buttons">
+              <a href='#quote'> <button class='button'> Get a Quote </button></a>
+              <a href='#subscribe-section'> <button class='button btn-dark' id='contact'> Contact Us </button></a>
+          </div>
+      </div>
+    </div>
+</section>
+
+
+<div class='section'>
+  <div class='newsletter-div fade-in' id='section-rr'>
+      <p class="text-big" >Recent Releases</p>
+  </div>
+
+
+  <div class="container">
+
+      {% for items in releases %}
+      {% if forloop.counter < 5 %} <div class="card slide-up">
+          <img src="{{items.image.url}}" alt="Person" class="card__image">
+          <p class="card__name">Listen Now!</p>
+          <div class="listen-button">
+
+              <a href="{{items.spotify}}" target='_blank'><button class='listen' id='spotify'>
+                      <ion-icon name="filter-circle"></ion-icon>
+                  </button> </a>
+              <a href="{{items.youtube}}" target='_blank'><button class='listen' id="yt">
+                      <ion-icon name="logo-youtube"></ion-icon>
+                  </button> </a>
+          </div>
+  </div>
+  {% endif %}
+
+  {% endfor %}
+
+</div>
+<div class="button-container"><a href="/blogs" target='_blank'><button class='button' id="more-releases"> More
+  Releases</button></a></div>
+</div>
+
+
+<section class="section about-us">
+    <div class="section-heading" id='section-about'>
+        <h1 class="fade-in">Who Are We?</h1>
+    </div>
+    <div class="paras fade-in">
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus molestiae maxime delectus dicta, in
+            voluptas excepturi recusandae iusto natus sunt ea fuga officia veniam. Dolorem alias itaque fuga eaque!
+            Dolorum rem rerum at eum beatae est alias, animi architecto totam quae voluptates nesciunt, voluptas hic
+            eveniet possimus fugiat sunt sed sint. Debitis deleniti exercitationem, quisquam commodi repellat quidem
+            reprehenderit dolor nulla est ipsam illum, fugiat doloribus, animi inventore velit eius?
+            <br> <br> Dignissimos
+            quaerat magni corporis assumenda ab porro quas debitis cumque aliquid dolorem impedit perspiciatis
+            deleniti amet ipsum nostrum officia reprehenderit laboriosam necessitatibus explicabo nesciunt
+            voluptatum delectus nulla, animi atque? Maiores nemo labore obcaecati incidunt. Pariatur aperiam eaque
+            laborum quisquam sed hic earum voluptates vero magnam reiciendis consectetur tempora enim quo tenetur,
+        </p>
+    </div>
+    
+    <br>
+</section>
+
+<!-- <section class="our-clients">
+  <div class="section-heading">
+      <h2>Our clients</h2>    
+  </div>
+  <hr style="border: none; background-color:white; width: 18%; height: 2px; margin: auto; margin-top: 15px;">
+  <div class="logo-container">
+      <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="/static/img/brand logo/cf.jpg" alt="" >
+            </div>
+            <div class="flip-box-back">
+              <img src="/static/img/brand logo/cf.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="/static/img/brand logo/yatri.jpg" alt="">
+            </div>
+            <div class="flip-box-back">
+              <img src="/static/img/brand logo/yatri.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="/static/img/brand logo/niu.png" alt="" style="transform: scale(0.7);">
+            </div>
+            <div class="flip-box-back">
+              <img src="/static/img/brand logo/niu.png" alt="" style="transform: scale(0.7);">
+            </div>
+          </div>
+        </div>
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="/static/img/brand logo/toyota2.jpg" alt="" style="transform: scale(0.9);"> 
+            </div>
+            <div class="flip-box-back">
+              <img src="/static/img/brand logo/toyota2.jpg" alt="" style="transform: scale(0.9);">
+            </div>
+          </div>
+        </div>
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="/static/img/brand logo/latido2.jpg" alt="" style="transform: scale(0.8);">
+            </div>
+            <div class="flip-box-back">
+              <img src="/static/img/brand logo/latido2.jpg" alt="" style="transform: scale(0.8);">
+            </div>
+          </div>
+        </div>
+      <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="/static/img/brand logo/skoda.jpg" alt="" style="transform: scale(0.8);">
+            </div>
+            <div class="flip-box-back">
+              <img src="/static/img/brand logo/skoda.jpg" alt="" style="transform: scale(0.8);">
+            </div>
+          </div>
+        </div>
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="/static/img/brand logo/foton.png" alt="" style="filter: invert();">
+            </div>
+            <div class="flip-box-back">
+              <img src="/static/img/brand logo/foton.png" alt="" style="filter: invert();">
+            </div>
+          </div>
+        </div>
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img src="/static/img/brand logo/yamaha.jpg" alt="" style="transform: scale(0.9);">
+            </div>
+            <div class="flip-box-back">
+              <img src="/static/img/brand logo/yamaha.jpg" alt="" style="transform: scale(0.9);">
+            </div>
+          </div>
+        </div>
+
+  </div>
+      
+</section> -->
+
+<!-- <section class="contact section" id="quote">
+    <h1 class="text-center">Get A Quote</h1>
+    <div class="form">
+        <form action="/submitted" method='post'>
+            {% csrf_token %}
+            <input class="form-input" type="text" name="name" id="name" placeholder="Enter Your name" required>
+            <input class="form-input" type="text" name="phone" id="phone" placeholder="Enter Your Phone" required>
+            <input class="form-input" type="email" name="email" id="phone" placeholder="Enter Your email" required>
+            <textarea class="form-input" name="details" id="" cols="30" rows="10"
+                placeholder="Project Details, Budget, Ideas, Expectations.." required></textarea>
+            <button class="button btn-dark quote-submit-button" type="submit">Submit</button>
+        </form>
+    </div>
+
+</section> -->
+
+
+
+
+<div class='section'>
+  <div class='newsletter-div fade-in' id='section-rr'>
+    <p class="text-big" >Recent BLOGS</p>
+</div>
+    <section class="blogs-section">
+
+        <div class="post-container">
+            {% for items in posts %}
+            {% if forloop.counter < 4 %} <a href="/blogs/{{items.slug}}" target='_blank'>
+                <div class="blog-card slide-up">
+                    <div class="blog-card__header">
+                        <img src="{{items.image.url}}" alt="blog-card__image" class="blog-card__image" width="600">
+                    </div>
+                    <div class="blog-card__body">
+                        <span class="tag tag-blue">{{items.category}}</span>
+                        <h4>{{items.title}}</h4>
+                        <p>{{items.content | slice:200}}...</p>
+                    </div>
+                    <div class="blog-card__footer">
+                        <div class="blog-author">
+                            <img src="{{items.authorImg.url}}" alt="author__image" class="author__image">
+                            <div class="author__info">
+                                <h5>{{items.author}}</h5>
+                                <small>{{items.dateTime}}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+        </div>
+        <div class="button-container"><a href="/blogs" target='_blank'><button class='button' id="more-releases"> More
+                    Posts</button></a></div>
+    </section> <br>
+</div>
+
+
+
+<!-- <section class="collaborations section">
+    <div class="section-heading">
+        <h2>Collaborations</h2>
+    </div>
+    <hr style="border: none; background-color:white; width: 18%; height: 2px; margin: auto; margin-top: 15px;">
+    <div id="testimonials">
+        <figure>
+            <img src="/static/img/slider1.jpg">
+            <img src="/static/img/slider2.jpg">
+            <img src="/static/img/slider1.jpg">
+            <img src="/static/img/slider3.jpg">
+            <img src="/static/img/slider1.jpg">
+        </figure>
+    </div>
+
+</section> -->
+
+
+
+
+
+
+
+<section class="newsletter section fade-in" id='subscribe-section'>
+    <div class="newsletter-div">
+        <div id='section-rr'>
+            <h1>Lets stay in touch </h1>
+
+        </div>
+        <br>
+        <br>
+        <p> <ion-icon name="rocket-outline"></ion-icon>Get the latest news, updates and best practices from <span style='font-weight:bold;'>untitled</span>.np. 
+        </p>
+        <form action="/home" class="form2" method='post'>
+            {% csrf_token %}
+            <div id="newsletter">
+                <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+
+                <button type='submit' class='button newsletter-btn btn-dark'> Subscribe </button>
+        </form>
+    </div>
+
+
+    </div>
+    <div class=' social-section'>
+        <div class="section-heading">
+            <h5>Follow Us On</h5>
+        </div>
+        <div class="socials">
+
+            <a href="https://www.facebook.com/untitled.np">
+                <ion-icon name="logo-facebook" id='fb'></ion-icon>
+            </a>
+            <a href="https://www.instagram.com/untitled.np/">
+                <ion-icon name="logo-instagram" id='ig'></ion-icon>
+            </a>
+            <a href="https://www.youtube.com">
+                <ion-icon name="logo-youtube" id='yout'></ion-icon>
+            </a>
+            <a href="https://www.spotify.com">
+                <ion-icon name="filter-circle" id='spotify2'></ion-icon>
+            </a>
+            <a href="https://www.spotify.com">
+                <ion-icon name="logo-tiktok" id='tiktok'></ion-icon>
+            </a>
+        </div>
+
+</section>
+
+{% endblock body %}

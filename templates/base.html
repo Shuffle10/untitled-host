@@ -1,0 +1,108 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/responsive.css">
+    <link rel="stylesheet" href="/static/artists.css">
+    <link rel="stylesheet" href="/static/blogs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+
+    <title>
+        {% block title %}{% endblock title %}
+    </title>
+    <link rel="shortcut icon" type="image" href="/static/img/title_logo.png">
+</head>
+
+<body onload="pageLoaded()"> 
+
+    <nav class="navbar h-nav-resp">
+        <div class="logo"><a href="/"><span>untitled</span>.np</a></div>
+        <ul class="nav-list v-class-resp">
+            <li class="{% block homeactive %}{% endblock homeactive %}"><a href="/">Home</a></li>
+            <li class="{% block videosactive %}{% endblock videosactive %}"><a href="/videos">Videos</a></li>
+            <li class="{% block releasesactive %}{% endblock releasesactive %}"><a href="/releases">Releases</a></li>
+            <li class="{% block artistsactive %}{% endblock artistsactive %}"><a href="/artists">Artists</a></li>
+            <!-- <li class="{% block corporateactive %}{% endblock corporateactive %}"><a href="/corporate">corporate</a></li> -->
+            <li class="{% block blogsactive %}{% endblock blogsactive %}"><a href="/blogs">Blogs</a></li>
+            <li class="{% block eventsactive %}{% endblock eventsactive %}"><a href="/events">Events</a></li>
+        </ul>
+        <div class="rightNav v-class-resp">
+            <a href="/home#subscribe-section"><button class="subscribe-button"><i class="fas fa-bell"></i></button></a>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <!-- <img src="/static/img/rocket.png" alt="" id='rocket'> -->
+    
+    <div class="loader-container" id="loader">
+        <video id='pre-loader' autoplay loop muted>
+            <source src="/static/vid/preloader.mp4" type="video/mp4" >
+        </video>
+        
+    </div>
+    {%block body%}
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert success">
+                {{message}}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+
+    {% endblock body %}
+
+
+    <img  class="" id='rocket' src="/static/img/rocket.png" alt="" height="80px" width="80px" >
+    <div class="footer-txt">
+        <p class="text-footer">
+            Copyright &copy; 2021 - untitled.np - All rights reserved
+        </p>
+    </div>
+
+    <script src="{% static 'resp.js' %}"></script>
+    <script src="{% static 'script.js' %}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="{% static 'observer.js' %}"></script>
+    <script src="https://kit.fontawesome.com/1f8a1f8412.js" crossorigin="anonymous"></script>
+    <script>
+		// $(document).ready(function(){
+		// 		$('div#loading').removeAttr('id');
+		// });
+		var preloader = document.getElementById("loader");
+		window.addEventListener('load', function(){
+			
+                setTimeout(function(){ 
+                preloader.style.display = 'none'; 
+            }, 1500); 
+            
+			});
+
+		function pageLoaded(){
+			
+
+            setTimeout(function(){ 
+                preloader.style.display = 'none'; 
+            }, 1500);
+		};
+
+
+	</script>
+
+
+</body>
+
+</html>

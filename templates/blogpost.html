@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}untitled.np - Blogs{% endblock title %}
+
+{% block body %}
+<h2 class='section-heading' style='margin-top:20px'>{{blog.title}}</h2>
+<figure class='cover-photo' style="height:400px; background:url('{{blog.image.url}}'); background-size:cover; background-position:center;">
+</figure>
+<p class='blog-content'> {{blog.content|safe}} </p>
+{% endblock body %}

@@ -1,0 +1,48 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}untitled.np - Releases{% endblock title %}
+{% block releasesactive %}active{% endblock releasesactive %}
+{% block body %}
+    <div class='section-heading'>
+            <h1>Releases</h1>
+    </div>
+
+
+    <div class="container">
+            
+    {% for items in releases %}
+        <div class="card">
+            <img src="{{items.image.url}}"
+                alt="Person" class="card__image">
+            
+            <p class="card__name">{{items.name}} <br>
+            </p> <span class='desc'>
+            {{items.desc}} <span>
+            <div class="listen-button">
+
+                <a href="{{items.spotify}}" target='_blank'><button class='listen' id='spotify'>
+                    <ion-icon name="filter-circle"></ion-icon>
+                </button> </a>
+                <a href="{{items.youtube}}" target='_blank'><button class='listen' id="yt">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </button> </a>
+            </div>
+        </div>
+
+{% endfor %}
+
+    </div>
+    <div class="loader-container" id="loader">
+        <video id='pre-loader' autoplay loop muted>
+            <source src="/static/vid/preloader.mp4" type="video/mp4" >
+        </video>
+    </div>
+    <hr>
+
+
+
+
+{% endblock body %}
+
+  
